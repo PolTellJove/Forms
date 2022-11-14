@@ -7,19 +7,6 @@
     <title></title>
 </head>
 <body>
-
-    <?php
-        if($_GET['colors'] == 'Foc'){
-            echo "<body style = 'background-color:red'>";
-        }else if($_GET['colors'] == 'Aigua'){
-            echo "<body style = 'background-color:blue'>";
-        }else if($_GET['colors'] == 'Terra'){
-            echo "<body style = 'background-color:brown'>";
-        }else{
-            echo "<body>";
-        }
-    ?>
-
     <form method="GET">
         <select name="colors">
             <option <?php if($_GET['colors']=='Foc')
@@ -31,6 +18,16 @@
         </select>
         <input type="submit">
     </form>
-
+    <?php
+        if($_GET['colors'] == 'Foc'){
+            echo "<body style = 'background-color:red'>";
+        }else if($_GET['colors'] == 'Aigua'){
+            echo "<body style = 'background-color:blue'>";
+        }else if($_GET['colors'] == 'Terra'){
+            echo "<body style = 'background-color:brown'>";
+        }else{
+            echo "<body>";
+        }
+    ?>
 </body>
 </html>
