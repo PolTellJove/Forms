@@ -1,19 +1,15 @@
-<?php
-$usuaris = [
-    0 => ["usuari"=>"Manel","contrasenya"=>"manelet"],
-    1 => ["usuari"=>"Joan","contrasenya"=>"joanet"],
-    2 => ["usuari"=>"Francesc","contrasenya"=>"francesquet"]
-];
-$nom = $_POST["usuari"];
-$contrasenya = $_POST["contrasenya"];
-foreach($usuaris as $usuari){
-    if($nom == $usuari["usuari"] && $contrasenya == $usuari["contrasenya"]){
-        $missatge = "<p>Hola $nom.</p>";
-        break;
-    }
-    else{
-        $missatge = "<p>$nom no es troba registrat.</p>";
-    }
-}
-echo $missatge;
-?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulari</title>
+    </head>
+    <body>
+        <form action="index2.php" method="POST">
+            <label>Usuari: </label>
+            <input type="text" name="usuari" id="usuari">
+            <label>Contrasenya: </label>
+            <input type="password" name="contrasenya" id="contrasenya">
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>
